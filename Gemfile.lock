@@ -76,6 +76,7 @@ GEM
       nokogiri (~> 1.8)
     concurrent-ruby (1.1.4)
     crass (1.0.4)
+    dotenv (2.6.0)
     erubi (1.8.0)
     ffi (1.10.0)
     globalid (0.4.2)
@@ -195,6 +196,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   chromedriver-helper
+  dotenv
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
@@ -207,7 +209,7 @@ DEPENDENCIES
   webpacker (>= 4.0.0.rc.3)
 
 RUBY VERSION
-   ruby 2.6.0p-1
+   ruby 2.6.1p33
 
 BUNDLED WITH
-   2.0.0
+   2.0.1
