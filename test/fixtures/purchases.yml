@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  weight: MyString
+  price_cents: MyString
+  user: one
+
+two:
+  weight: MyString
+  price_cents: MyString
+  user: two

@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   post '/api', controller: 'api/events', action: :create
   post '/api/register', controller: 'api/users', action: :create
   post '/api/unregister', controller: 'api/users', action: :destroy
+
+  post '/api/beans/purchase', controller: 'api/beans', action: :purchase
 end
