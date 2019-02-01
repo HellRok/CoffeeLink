@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   post '/api', controller: 'api/events', action: :create
+  post '/api/register', controller: 'api/users', action: :create
+  post '/api/unregister', controller: 'api/users', action: :destroy
 end
