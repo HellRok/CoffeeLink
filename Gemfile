@@ -44,3 +44,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'httparty'
 gem 'monetize'
 gem 'obfuscate'
+group :development do
+  gem 'faker'
+end
