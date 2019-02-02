@@ -9,8 +9,8 @@ class User < ApplicationRecord
           WHERE users.id = user_id
           ORDER BY created_at DESC
           LIMIT 1
-      ) DESC,
-      created_at DESC
+      ) ASC NULLS FIRST,
+      created_at ASC
     SQL
   }
 end
