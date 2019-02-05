@@ -2,18 +2,41 @@
   <%= @team.domain %>
 </h1>
 
-<h2>Who's buying next?</h2>
-<% @purchase_order.each do |user| %>
-  <div>
-    <%= user.name %> -
-    <% if user.purchases.bought_order.first %>
-      Last bought on
-      <%= user.purchases.bought_order.first.created_at.to_date %>
-    <% else %>
-      Yet to buy
-    <% end %>
+<div class="row">
+  <div class="column column-33">
+    <table>
+      <thead>
+        <tr>
+          <th class="table--header">
+            Who's buying next?
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @purchase_order.each_with_index do |user, index| %>
+          <tr>
+            <td>
+              <strong class="table--index"><%= index + 1 %>.</strong>
+              <%= user.name %>
+            </td>
+          </tr>
+        <% end%>
+      </tbody>
+    </table>
   </div>
-<% end%>
 
-<h2>Purchase History</h2>
-<%= render @purchases %>
+  <div class="column">
+    <table>
+      <thead>
+        <tr>
+          <th class="table--header">
+            Purchase History
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @purchases %>
+      </tbody>
+    </table>
+  </div>
+</div>

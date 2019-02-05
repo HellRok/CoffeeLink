@@ -4,3 +4,16 @@
   margin-right: auto;
   padding: 0.5rem;
 }
+
+table tbody tr:hover {
+  background: #F9F9F9;
+}
+
+// Milligram does not make %-width columns full width on small screens, I think
+// this is an oversight so I'm forcing it for the one use here.
+@media (max-width: 39.999rem) {
+  .column-33 {
+    flex: 1 1 auto !important;
+    max-width: 100% !important;
+  }
+}

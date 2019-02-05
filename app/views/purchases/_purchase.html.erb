@@ -1,7 +1,9 @@
-<p>
-  <%= purchase.user.name %> bought <%= purchase.weight %> grams of
-  <%= purchase.bean.name %>
-  <% if purchase.bean.location.present? %>
-    from <%= purchase.bean.location %>
-  <% end %>
-</p>
+<tr>
+  <td>
+    <%= purchase.user.name %> bought <%= purchase.weight %> grams of
+    <%= purchase.bean.name %>
+    <% if purchase.bean.location.present? %>
+      from <%= purchase.bean.location %>
+    <% end %>
+  </td>
+</tr>
