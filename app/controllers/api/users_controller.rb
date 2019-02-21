@@ -7,7 +7,9 @@ class Api::UsersController < ApiController
     @user = User.create_with(name: params['user_name'], team: @team).
       find_or_create_by(slack_id: params['user_id'])
 
-    helpers.post(params['response_url'], {
+    helpers.say("<@#{@user.slack_id}> has just joined CoffeeLink, they truly are a great person :coffee:")
+
+    helpers.respond(params['response_url'], {
       text: "You've now been registered to CoffeeLink!"
     })
   end
@@ -15,7 +17,7 @@ class Api::UsersController < ApiController
   def destroy
     @user = User.find_by(slack_id: params['user_id']).destroy!
 
-    helpers.post(params['response_url'], {
+    helpers.respond(params['response_url'], {
       text: "Goodbye from CoffeeLink, I hope your coffee free existance is worth it..."
     })
   end

@@ -21,7 +21,9 @@ class Api::BeansController < ApiController
       weight: weight
     )
 
-    helpers.post(params['response_url'], {
+    helpers.say("Everyone make sure to thank <@#{@user.slack_id}> for grabbing #{weight} grams of #{@bean.name} :coffee:")
+
+    helpers.respond(params['response_url'], {
       text: "Thanks for grabbing #{@bean.name}! I'm sure it'll be delicious."
     })
   end
