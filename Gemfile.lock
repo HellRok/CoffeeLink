@@ -224,7 +224,6 @@ DEPENDENCIES
   rails (~> 6.0.0.beta1)
   sass-rails (~> 5.0)
   selenium-webdriver
-  tzinfo-data
   web-console (>= 3.3.0)
   webpacker (>= 4.0.0.rc.3)
 
