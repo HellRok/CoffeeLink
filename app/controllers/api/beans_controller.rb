@@ -27,4 +27,11 @@ class Api::BeansController < ApiController
       text: "Thanks for grabbing #{@bean.name}! I'm sure it'll be delicious."
     })
   end
+
+  def low
+    team = User.find_by(slack_id: params['user_id']).team
+    next_user = team.users.purchase_order.active.first
+
+    helpers.say("The beans are running low! <@#{next_user.slack_id}> it's your turn to buy :coffee:")
+  end
 end

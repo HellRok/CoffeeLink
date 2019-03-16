@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post '/api/unregister', controller: 'api/users', action: :destroy
 
   post '/api/beans/purchase', controller: 'api/beans', action: :purchase
+  post '/api/beans/low', controller: 'api/beans', action: :low
 
   post '/api/teams/url', controller: 'api/teams', action: :url
 end
