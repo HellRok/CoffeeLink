@@ -13,6 +13,7 @@ class Api::UsersController < ApiController
           text: "You're already registered to CoffeeLink silly"
         })
       else
+        @user.update!(active: true)
         helpers.say("<@#{@user.slack_id}> has just come back to CoffeeLink, let's have a cuppa :coffee:")
 
         helpers.respond(params['response_url'], {
