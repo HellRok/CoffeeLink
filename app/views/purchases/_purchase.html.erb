@@ -1,5 +1,6 @@
 <tr>
   <td>
+    <%= purchase.created_at.to_date %>:
     <%= purchase.user.name %> bought <%= purchase.weight %> grams of
     <%= purchase.bean.name %>
     <% if purchase.bean.location.present? %>
