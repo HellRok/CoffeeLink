@@ -4,7 +4,7 @@ class Api::BeansController < ApiController
 
     weight, price = params['text'].split
 
-    name_and_location = params['text'].delete(weight).delete(price).strip
+    name_and_location = params['text'].gsub(weight, '').gsub(price, '').strip
 
     name, location = name_and_location.downcase.split('from').map(&:titleize)
 
