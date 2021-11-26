@@ -1,0 +1,3 @@
+tasks:
+  - init: sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install libsass-dev -y && gem install bundler && bundle install && yarn install
+    command: bundle exec rails server
